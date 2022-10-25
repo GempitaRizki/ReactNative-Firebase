@@ -1,4 +1,5 @@
-{
+import 'dotenv/config'
+export default{
   "expo": {
     "name": "ReactNative-Firebase",
     "slug": "ReactNative-Firebase",
@@ -31,3 +32,5 @@
     }
   }
 }
+
+//import set dari .env
