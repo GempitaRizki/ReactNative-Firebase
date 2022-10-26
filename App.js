@@ -1,3 +1,3 @@
-import Navigation from "./src/config/navigation";
+import Navigation from "./src/config/Navigation";
 
 export default function App() { return <Navigation/> }
