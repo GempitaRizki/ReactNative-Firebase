@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from 'firebase/firestore'
 import Constants from "expo-constants" 
-
+//konfigurasi dari firebase
 const firebaseConfig = {
   apiKey: Constants.manifest.extra.apiKey,
   authDomain: Constants.manifest.extra.authDomain,
@@ -13,7 +13,7 @@ const firebaseConfig = {
   measurementId: Constants.manifest.extra.measurementId
 };
 
+//inisialisasi dari firebase
 initializeApp(firebaseConfig)
 export default database = getFirestore()
 
-//konfigurasi dari firebase

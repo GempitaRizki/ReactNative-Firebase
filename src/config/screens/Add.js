@@ -1,43 +1,13 @@
 import * as React from 'react'
 import * as ReactNative from 'react-native'
-import EmojiPicker from 'rn-emoji-keyboard'
+import { useNavigation } from '@react-navigation/native'
 
-export default function Home() {
-    const [isOpen, setIsOpen] = React.useState(true)
-    const [ newItem, setNewItem] = React.useState({
-        emoji: '😎',
-        name : '',
-        price: 0,
-        isSold: false,
-        createAt: new Date()
-    })
-
-    const handlePick = (emojiObject) => {
-        setNewItem({
-            ...newItem,
-            emoji: emojiObject.emoji
-        })
-    }
-
+export default function Add() {
+    const navigation = useNavigation()
     return (
-        <ReactNative.View style={styles.container}>
-            <ReactNative.Text>Jual Product Baru</ReactNative.Text>
-            <ReactNative.Text>{newItem.emoji}</ReactNative.Text>
-            <EmojiPicker
-                onEmojiSelected={handlePick}
-                open={isOpen}
-                onClose={() => setIsOpen(false)}
-            />
-        </ReactNative.View>
+        <>
+        <ReactNative.Text>Ini adalah halaman Add </ReactNative.Text>
+        <ReactNative.Button title='menuju ke menu Home' onPress={() => navigation.navigate('Home')} />
+        </>
     )
 }
-
-const styles = ReactNative.StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center'
-    }
-})
-
-//Nilai styles untuk mengatur menu yang ada pada container 
